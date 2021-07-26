@@ -117,7 +117,9 @@ I have created tests dictory to cover unit tests for all files.
 To run tests, type ```python3 tests/file_name.py```.Add ```-v``` argument if you want verbosity.
 
 ShoppingCart unit test:  ```python3 tests/shopping_cart_tests.py``` 
+
 StorageItem unit test:  ```python3 tests/storage_item_tests.py``` 
+
 Common unit test:  ```python3 tests/common_lib_tests.py``` 
 
 
