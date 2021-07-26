@@ -20,6 +20,15 @@ class ShoppingCart():
         entity = (sku, quantity)
         self.cart.append(entity)
 
+    def subtotal(self):
+        """ 
+            Getting total price without taxes 
+        """
+        cart_subtotal = 0
+        for ent in self.cart:
+            item = StorageItem(ent[0])
+            cart_subtotal += item.price * ent[1]
+        return cart_subtotal
 
     def print_receipt(self):
         """ 
@@ -38,5 +47,5 @@ class ShoppingCart():
         print("\n".join(entities))
         print("Sales Taxes: {0:.2f}".format(all_taxes))
         print("Total: {0:.2f}".format(all_total))
-        print("{0} HAVE A NICE DAY! {0}".format("=" * 22))
+        print("{0} HAVE A NICE DAY!!!! {0}".format("=" * 22))
 
