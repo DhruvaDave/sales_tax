@@ -1,0 +1,61 @@
+[
+    {
+    "sku": "IN0101",
+    "name": "Book",
+    "category" : "books",
+    "price": 12.49,
+    "imported" : false
+    },{
+    "sku": "IN0102",
+    "name": "music CD",
+    "category" : "music",
+    "price": 14.99,
+    "imported" : false
+    },
+
+    {
+    "sku": "IN0103",
+    "name": "chocolate bar",
+    "category" : "food",
+    "price": 0.85,
+    "imported" : false
+    },{
+    "sku": "IN0201",
+    "name": "imported box of chocolate",
+    "category" : "food",
+    "price": 10.00,
+    "imported" : true
+    },{
+    "sku": "IN0202",
+    "name": "imported bottle of perfume",
+    "category" : "beauty",
+    "price": 47.50,
+    "imported" : true
+    },
+
+    {
+    "sku": "IN0301",
+    "name": "imported bottle of perfume",
+    "category" : "beauty",
+    "price": 27.99,
+    "imported" : true
+    },{
+    "sku": "IN0302",
+    "name": "imported perfume",
+    "category" : "beauty",
+    "price": 18.99,
+    "imported" : false
+    },{
+    "sku": "IN0303",
+    "name": "packet of headache pills",
+    "category" : "medical",
+    "price": 9.75,
+    "imported" : false
+    },{
+    "sku": "IN0304",
+    "name": "box of imported chocolate",
+    "category" : "food",
+    "price": 11.25,
+    "imported" : true
+    }
+]
