@@ -16,7 +16,7 @@ class ShoppingCart():
         """ 
             Adding items to cart 
         """
-        logging.info('Adding into cart for %s'%quantity)
+        logging.info('Adding into cart %s'%name)
         entity = (quantity, imported, price, category, name)
         self.cart.append(entity)
 

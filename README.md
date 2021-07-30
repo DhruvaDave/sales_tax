@@ -100,7 +100,7 @@ Go to directory where *sales_tax_demo.py* stored.
 
 To run solution, type ```python3 sales_taxes.py <order items>```, for example:
 
-To test input:
+To test input(You need to manually write order details in console input - copy/paste will not work in console input):
  
 ```python3 sales_tax_demo.py```
 
