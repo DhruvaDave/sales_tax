@@ -12,12 +12,12 @@ class ShoppingCart():
     def __init__(self):
         self.cart = []
 
-    def add(self, quantity, sku):
+    def add(self, quantity, imported, price, category, name):
         """ 
             Adding items to cart 
         """
-        logging.info('Adding into cart for %s'%sku)
-        entity = (sku, quantity)
+        logging.info('Adding into cart for %s'%quantity)
+        entity = (quantity, imported, price, category, name)
         self.cart.append(entity)
 
     def subtotal(self):
@@ -26,8 +26,8 @@ class ShoppingCart():
         """
         cart_subtotal = 0
         for ent in self.cart:
-            item = StorageItem(ent[0])
-            cart_subtotal += item.price * ent[1]
+            item = StorageItem(ent)
+            cart_subtotal += item.price
         return cart_subtotal
 
     def print_receipt(self):
@@ -39,9 +39,9 @@ class ShoppingCart():
         all_total = 0
         all_taxes = 0
         for ent in self.cart:
-            item = StorageItem(ent[0])
+            item = StorageItem(ent)
             total = round((item.price + item.tax), 2)
-            entities.append("{} {} at {:.2f}".format(ent[1], item.name, total))
+            entities.append("{} {} at {:.2f}".format(item.quantity, item.name, total))
             all_total += total
             all_taxes += item.tax
         print("\n".join(entities))

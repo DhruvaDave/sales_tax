@@ -1,6 +1,6 @@
 
 import unittest
-from common_lib import tax_round, load_order
+from common_lib import tax_round
 
 class TestCommonMethods(unittest.TestCase):
     """ 
@@ -15,18 +15,3 @@ class TestCommonMethods(unittest.TestCase):
         for i in taxes:
             self.assertEqual(tax_round(i), rtaxes[taxes.index(i)])
 
-    def test_load_order_success(self):
-        """ 
-            Simple order loading success 
-        """
-        order = "data/test_order.txt"
-        lo =load_order(order)
-        self.assertEqual(len(lo), 9)
-
-    def test_load_order_failed(self):
-        """ 
-            Simple order loading fail 
-        """
-        order = "data/test_order_fail.txt"
-        lo =load_order(order)
-        self.assertNotEqual(len(lo), 9)

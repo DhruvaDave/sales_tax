@@ -2,42 +2,22 @@
     Constants
 """
 
-# Sample file formate
-SAMPLE_FORMATE = '''
-Catalog file format example:
-[
-    {
-    "sku": "IN0101",
-    "name": "local item NAME",
-    "category" : "beauty",
-    "price": 9.99,
-    "imported" : false
-    },{
-    "sku": "IN0102",
-    "name": "imported item NAME",
-    "category" : "books",
-    "price": 15.29,
-    "imported" : true
-    }
-]
-'''
-
 # Usage instructions
 USAGE = '''
 Usage:
-    python3 sales_taxes.py [order_file]\n
+    python3 \n
+    <order item input>
+    <order item input>
 Example:
-    python3 sales_taxes.py data/order_1.txt
+    python3 sales_taxes.py
+    1 book at 12.49
+    1 music CD at 14.99
+    1 chocolate bar at 0.85
 '''
-# Order file format example
-FORMATE_EX = '''
-Order File format example:
-1,IN0101
-1,IN0102
-2,IN0103
-'''
+
 
 TAX_BASIC = 10  # Basic tax on all goods except some 'specials'
 TAX_IMPORT = 5  # Imported goods tax
-TAX_EXEMPT = ['books', 'food', 'medical'] 
+TAX_EXEMPT = ['book', 'food', 'medical'] # Exempt Tax Products
+TAX_VALUES = {'book': ['book'], 'food': ['box of chocolates', 'chocolate bar'], 'medical': ['packet of headache pills']}
 ROUND = 20

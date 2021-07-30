@@ -14,9 +14,10 @@ class TestShoppintCart(unittest.TestCase):
             Unit test Setup
         """
         self.sc = ShoppingCart()
-        cart_items = [(1, 'IN0302'), (1, 'IN0303'), (1, 'IN0301')]
+        cart_items = [(1, False, 18.99, 'other', 'imported perfume'), (1, False, 9.75, 'medical', 'packet of headache pills'), 
+                        (1, True, 27.99, 'other', 'bottle of perfume')]
         for item in cart_items:
-            self.sc.add(item[0], item[1])
+            self.sc.add(item[0], item[1], item[2], item[3], item[4])
 
     def test_sc_subtotal(self):
         """ 

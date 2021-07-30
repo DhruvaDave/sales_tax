@@ -18,21 +18,21 @@ class TestStorageItem(unittest.TestCase):
         """ 
             Local items tax calculating 
         """
-        si = StorageItem('IN0302')
+        si = StorageItem([1, False, 18.99, 'other', 'imported perfume'])
         self.assertEqual(si.tax, 1.9)
 
     def test_imported_tax(self):
         """ 
             Imported items tax calculating 
         """
-        si = StorageItem('IN0304')
+        si = StorageItem([1, True, 11.25, 'food', 'box of chocolates'])
         self.assertEqual(si.tax, 0.6)
 
     def test_no_tax(self):
         """ 
             Check items that are exempt 
         """
-        si = StorageItem('IN0101')
+        si = StorageItem([1, False, 12.49, 'book', 'book'])
         self.assertEqual(si.tax, 0)
 
 

@@ -98,16 +98,18 @@ Only standard library was used, so to run this solution, you need only **Python 
 
 Go to directory where *sales_tax_demo.py* stored.
 
-To run solution, type ```python3 sales_taxes.py [PATH TO ORER FILE]```, for example:
+To run solution, type ```python3 sales_taxes.py <order items>```, for example:
 
-To test input 1: ```python3 sales_tax_demo.py data/order_1.txt```
+To test input:
+ 
+```python3 sales_tax_demo.py```
 
-To test input 2: ```python3 sales_tax_demo.py data/order_2.txt```
+```1 book at 12.49 ```
 
-To test input 3: ```python3 sales_tax_demo.py data/order_3.txt```
+```1 music CD at 14.99 ```
 
+```1 chocolate bar at 0.85 ```
 
-Additionally, *test_order.txt* file was added to demonstrate parsing file with spaces.
 
 Unit Test
 ---
