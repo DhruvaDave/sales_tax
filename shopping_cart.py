@@ -10,6 +10,9 @@ class ShoppingCart():
         Shopping Cart 
     """
     def __init__(self):
+        """
+            Initialisation of cart
+        """
         self.cart = []
 
     def add(self, quantity, imported, price, category, name):

@@ -4,7 +4,6 @@
 
 from __future__ import division
 import logging
-from custom_exception import SalesException
 from common_lib import tax_round
 from constants import TAX_BASIC, TAX_EXEMPT, TAX_IMPORT
 
@@ -17,7 +16,7 @@ class StorageItem():
 
     def __init__(self, ent):
         """ 
-            Get object attributes by primaray key -> sku 
+            Inititalisation of storage item
         """
         self.name = ent[-1]
         self.category = ent[3]
@@ -36,8 +35,10 @@ class StorageItem():
         total_tax = 0
         result_tax = 0
         
+        # calculate tax based on item is in exempt or not
         if self.category not in TAX_EXEMPT:
             tax += TAX_BASIC
+        # calculate Tax based on item is imported or not
         if self.imported:
             tax += TAX_IMPORT
         
